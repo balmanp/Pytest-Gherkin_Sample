@@ -3,6 +3,10 @@ import logging
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 # Setup logging
 def setup_logging():
@@ -107,5 +111,8 @@ def pytest_runtest_makereport(item, call):
 
 # Context fixture for shared data
 @pytest.fixture
+def driver(browser):
+    return browser
+
 def context():
     return {}
