@@ -8,6 +8,8 @@ import os
 
 # Import feature file
 scenarios('../features/swaglabs copy.feature')
+def test_swaglabs(browser):
+    pass
 
 # Fixtures
 @pytest.fixture
